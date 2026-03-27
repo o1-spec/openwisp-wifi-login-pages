@@ -64,7 +64,7 @@ const UnifiedHeader = ({
       if (isInternalLink(link.url) && (internalLinks.indexOf(link.url) < 0 || !isAuthenticated)) {
         return (
           <Link
-            className={`unified-link button ${
+            className={`unified-link header-link button ${
               pathname === link.url.replace("{orgSlug}", orgSlug) ? "active" : ""
             }`}
             to={link.url.replace("{orgSlug}", orgSlug)}
@@ -77,7 +77,7 @@ const UnifiedHeader = ({
       return (
         <a
           href={link.url}
-          className="unified-link button"
+          className="unified-link header-link button"
           target="_blank"
           rel="noreferrer noopener"
           key={link.url}
@@ -106,34 +106,38 @@ const UnifiedHeader = ({
   return (
     <>
       <div className="unified-header-container">
-        <div className="unified-top-row">
-          <div className="unified-logos">
-            {logo && logo.url && (
-              <Link to={`/${orgSlug}`}>{renderLogo(logo)}</Link>
-            )}
-            {secondLogo && renderLogo(secondLogo)}
-          </div>
-          
-          <div className="unified-controls">
-            {renderLanguages("unified-desktop-langs")}
-            <div
-              role="button"
-              tabIndex={0}
-              className="unified-hamburger"
-              onClick={handleHamburger}
-              onKeyUp={handleKeyUp}
-              aria-label={getText({ en: "Menu Button" }, language)}
-            >
-              <div className={`${menu ? "rot45" : ""}`} />
-              <div className={`${menu ? "rot-45" : ""}`} />
-              <div className={`${menu ? "opacity-hidden" : ""}`} />
+        <div className="unified-top-wrapper header-row-1">
+          <div className="unified-top-row">
+            <div className="unified-logos">
+              {logo && logo.url && (
+                <Link to={`/${orgSlug}`}>{renderLogo(logo)}</Link>
+              )}
+              {secondLogo && renderLogo(secondLogo)}
+            </div>
+            
+            <div className="unified-controls">
+              {renderLanguages("unified-desktop-langs")}
+              <div
+                role="button"
+                tabIndex={0}
+                className="unified-hamburger"
+                onClick={handleHamburger}
+                onKeyUp={handleKeyUp}
+                aria-label={getText({ en: "Menu Button" }, language)}
+              >
+                <div className={`${menu ? "rot45" : ""}`} />
+                <div className={`${menu ? "rot-45" : ""}`} />
+                <div className={`${menu ? "opacity-hidden" : ""}`} />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className={`unified-nav-row ${menu ? "open" : ""}`}>
-          <div className="unified-links">{renderLinks()}</div>
-          {renderLanguages("unified-mobile-langs")}
+        <div className={`unified-nav-wrapper header-row-2 ${menu ? "open" : ""}`}>
+          <div className="unified-nav-row">
+            <div className="unified-links">{renderLinks()}</div>
+            {renderLanguages("unified-mobile-langs")}
+          </div>
         </div>
       </div>
       {renderStickyMsg()}
