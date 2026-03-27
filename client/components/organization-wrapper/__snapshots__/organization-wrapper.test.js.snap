@@ -16,7 +16,7 @@ exports[`<OrganizationWrapper /> interactions should render main title if pageTi
       <Routes>
         <Route
           element={
-            <Memo(Connect(Header))
+            <Memo(Connect(UnifiedHeader))
               location={
                 {
                   "pathname": "",
@@ -246,7 +246,7 @@ exports[`<OrganizationWrapper /> interactions should render pageTitle if it is n
       <Routes>
         <Route
           element={
-            <Memo(Connect(Header))
+            <Memo(Connect(UnifiedHeader))
               location={
                 {
                   "pathname": "",
@@ -476,7 +476,7 @@ exports[`<OrganizationWrapper /> interactions should show route for authenticate
       <Routes>
         <Route
           element={
-            <Memo(Connect(Header))
+            <Memo(Connect(UnifiedHeader))
               location={
                 {
                   "pathname": "",
@@ -706,7 +706,7 @@ exports[`Test Organization Wrapper for authenticated and unverified users should
       <Routes>
         <Route
           element={
-            <Memo(Connect(Header))
+            <Memo(Connect(UnifiedHeader))
               location={
                 {
                   "pathname": "",
@@ -930,7 +930,7 @@ exports[`Test Organization Wrapper for unauthenticated users should show route f
       <Routes>
         <Route
           element={
-            <Memo(Connect(Header))
+            <Memo(Connect(UnifiedHeader))
               location={
                 {
                   "pathname": "",
