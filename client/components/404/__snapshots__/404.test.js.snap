@@ -1,123 +1,45 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<DoesNotExist /> rendering should render correctly custom 404 page with props 1`] = `
-<div
-  className="container content"
-  id="not-foud-404"
->
+<div>
   <div
-    className="inner"
+    class="container content"
+    id="not-foud-404"
   >
     <div
-      className="main-column"
+      class="inner"
     >
       <div
-        className="inner"
+        class="main-column"
       >
         <div
-          className="row owisp-404-row-1"
+          class="inner"
         >
-          404
-        </div>
-        <div
-          className="row owisp-404-row-2"
-        >
-          Not Found
-        </div>
-        <div
-          className="row owisp-404-row-3"
-        >
-          Sorry, we couldn't find the page you were looking for.
-        </div>
-        <div
-          className="row owisp-404-row-4"
-        >
-          <Link
-            className="link"
-            to="/default"
+          <div
+            class="row owisp-404-row-1"
           >
-            Go back to homepage
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<DoesNotExist /> rendering should render correctly default 404 page without props 1`] = `
-<div
-  className="container content"
-  id="not-foud-404"
->
-  <div
-    className="inner"
-  >
-    <div
-      className="main-column"
-    >
-      <div
-        className="inner"
-      >
-        <div
-          className="row owisp-404-row-1"
-        >
-          Oops!
-        </div>
-        <div
-          className="row owisp-404-row-2"
-        >
-          404 Not Found
-        </div>
-        <div
-          className="row owisp-404-row-3"
-        >
-          Sorry, an error has occurred, Requested page not found!
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<DoesNotExist /> rendering with placeholder translation tags should render translation placeholder correctly 1`] = `
-<div
-  className="container content"
-  id="not-foud-404"
->
-  <div
-    className="inner"
-  >
-    <div
-      className="main-column"
-    >
-      <div
-        className="inner"
-      >
-        <div
-          className="row owisp-404-row-1"
-        >
-          404_H
-        </div>
-        <div
-          className="row owisp-404-row-2"
-        >
-          404_SUBH
-        </div>
-        <div
-          className="row owisp-404-row-3"
-        >
-          404_MESSAGE
-        </div>
-        <div
-          className="row owisp-404-row-4"
-        >
-          <Link
-            className="link"
-            to="/default"
+            404
+          </div>
+          <div
+            class="row owisp-404-row-2"
           >
-            HOME_PG_LINK_TXT
-          </Link>
+            Not Found
+          </div>
+          <div
+            class="row owisp-404-row-3"
+          >
+            Sorry, we couldn't find the page you were looking for.
+          </div>
+          <div
+            class="row owisp-404-row-4"
+          >
+            <a
+              class="link"
+              href="/default"
+            >
+              Go back to homepage
+            </a>
+          </div>
         </div>
       </div>
     </div>

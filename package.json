@@ -75,6 +75,8 @@
     "@babel/plugin-transform-spread": "^7.15.8",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "12.1.5",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
     "babel-jest": "^30.2.0",
     "babel-loader": "^10.0.0",
