@@ -37,6 +37,7 @@ import {localStorage} from "../../utils/storage";
 import handleSession from "../../utils/session";
 import getPlanSelection from "../../utils/get-plan-selection";
 import getPlans from "../../utils/get-plans";
+import SessionManager from "./managers/SessionManager";
 
 export default class Status extends React.Component {
   constructor(props) {
@@ -324,20 +325,9 @@ export default class Status extends React.Component {
 
   async getUserRadiusSessions(params) {
     const {cookies, orgSlug, logout, userData} = this.props;
-    const url = getUserRadiusSessionsUrl(orgSlug);
-    const auth_token = cookies.get(`${orgSlug}_auth_token`);
-    handleSession(orgSlug, auth_token, cookies);
     const options = {};
     try {
-      const response = await axios({
-        method: "get",
-        headers: {
-          "content-type": "application/x-www-form-urlencoded",
-          Authorization: `Bearer ${userData.auth_token}`,
-        },
-        url,
-        params,
-      });
+      const response = await SessionManager.getSessions(orgSlug, userData.auth_token, cookies, params);
       const {headers} = response;
       if (params.is_open) {
         options.activeSessions = response.data;
@@ -381,20 +371,10 @@ export default class Status extends React.Component {
       setPlanExhausted,
     } = this.props;
     const {warningMessage} = this.state;
-    const url = getUserRadiusUsageUrl(orgSlug);
-    const auth_token = cookies.get(`${orgSlug}_auth_token`);
-    handleSession(orgSlug, auth_token, cookies);
     const options = {radiusUsageSpinner: false};
     let isPlanExhausted = false;
     try {
-      const response = await axios({
-        method: "get",
-        headers: {
-          "content-type": "application/x-www-form-urlencoded",
-          Authorization: `Bearer ${userData.auth_token}`,
-        },
-        url,
-      });
+      const response = await SessionManager.getUsage(orgSlug, userData.auth_token, cookies);
       if (response.data.plan) {
         options.userPlan = response.data.plan;
       }
