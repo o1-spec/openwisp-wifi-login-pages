@@ -37,10 +37,19 @@ Since this is a minimum viable prototype, several complete project deliverables 
 
 ## Demo
 
-*(Placeholder: Include screenshots or a GIF here in the final proposal presentation showing the modernized header responsiveness and successful test runs.)*
+Here is a visual overview of the prototype changes.
 
-![Responsive Navigation Preview](#) 
-![React Testing Library Test Run](#)
+### 1. Unified Header Refactor
+*Testing the single unified HTML payload utilizing CSS Flexbox versus the previously hard-coded duplicates.*
+![Header File Change & View](./docs/images/gsoc/header-refactor.gif)
+
+### 2. Status Manager Extraction
+*Extracting API requests (`getUserRadiusSessions`, etc.) out of the massive `Status.js` component and into isolated, testable managers.*
+![File Structure Overview](./docs/images/gsoc/file-structure.png)
+
+### 3. RTL Migration Example
+*Locally running the newly migrated `404.test.js` using `@testing-library/react` and `@testing-library/jest-dom`.*
+![Passing RTL Tests](./docs/images/gsoc/test-running.png)
 
 ---
 
