@@ -23,6 +23,11 @@ The prototype focuses on exactly three core improvements outlined in the project
 * **What was done:** Bootstrapped `@testing-library/react` and completely rewrote `client/components/404/404.test.js` using modern `render` and `screen` patterns instead of Enzyme’s `shallow` wrappers. 
 * **Why it matters:** Provides a working template for the full migration effort later and verifies RTL plays cleanly with the current local storage / config mock setup.
 
+### 4. Captive Portal API Design (RFC 8908)
+*Modern captive portals can expose standard states (internet, portal, unknown).*
+* **What was done:** I defined a complete design for how Captive Portal detection should work, including feature flags, per-org config, timeout behavior, fallback semantics, and diagram/implementation plan. (A minimal proof diagram is included in the design documentation.)
+* **Why it matters:** This confirms the project is ready for implementation during the summer and ensures behavior remains safe for legacy deployments.
+
 ---
 
 ## Notes (What is NOT implemented)
@@ -68,3 +73,15 @@ Here is a visual overview of the prototype changes.
    ```
 
 3. Please review the specific commits corresponding to the prototype for a granular view of the code restructuring.
+
+### 5. Full feature list with status
+1. Refactor Status Component
+   - [refactor] Simplify status component logic #918
+2. Eliminate Redundancy of Header HTML
+   - [refactor] Eliminate redundancy of header HTML #314 (implemented)
+3. React Testing Library Migration Example
+   - [upgrade] React 19 migration #870 (implemented)
+4. Move redirect logic from OrganizationWrapper to components
+   - [refactor] Move redirect logic from OrganizationWrapper #272 (design/proposed)
+5. Add Support for Captive Portal API
+   - [feature] Add support for captive-portal API #947 (design/proposed)
