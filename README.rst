@@ -2,7 +2,7 @@ openwisp-wifi-login-pages
 =========================
 
 .. note::
-    For the GSoC prototype branch, see ``GSoC_PROTOTYPE.md`` for detailed design notes and screenshots.
+    For the GSoC prototype branch (`gsoc-wifi-login-pages-prototype`), see ``GSoC_PROTOTYPE.md`` for detailed design notes and screenshots.
 
 .. image:: https://github.com/openwisp/openwisp-wifi-login-pages/actions/workflows/ci.yml/badge.svg
     :target: https://github.com/openwisp/openwisp-wifi-login-pages/actions/workflows/ci.yml
